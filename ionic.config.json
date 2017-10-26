@@ -1,6 +1,8 @@
 {
   "name": "Pizza",
-  "app_id": "",
+  "app_id": "fff85df9",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
