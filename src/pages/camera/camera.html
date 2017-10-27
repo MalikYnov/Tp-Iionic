@@ -10,7 +10,7 @@
 
 <ion-content padding>
   <h3>Camera</h3>
-  <button ion-button secondary menuToggle (click)="btnCameraTapped($event, item)">Take Picture</button>
+  <button ion-button secondary menuToggle (click)="btnCameraTapped($event)">Take Picture</button>
 
-  <img src="base64ToGallery" *ngIf="base64ToGallery" />
+  <img src="imageData" *ngIf="imageData" />
 </ion-content>
