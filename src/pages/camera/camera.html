@@ -12,5 +12,5 @@
   <h3>Camera</h3>
   <button ion-button secondary menuToggle (click)="btnCameraTapped($event)">Take Picture</button>
 
-  <img src="imageData" *ngIf="imageData" />
+  <img src="{{imgView}}" *ngIf="imgView" />
 </ion-content>
