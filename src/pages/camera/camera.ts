@@ -29,7 +29,7 @@ export class CameraPage {
     this.camera.getPicture(this.options).then((imageData) => {
      // imageData is either a base64 encoded string or a file URI
      // If it's base64:
-     This.base64ToGallery = 'data:image/jpeg;base64,' + imageData;
+     this.base64ToGallery = 'data:image/jpeg;base64,' + imageData;
 
     }, (err) => {
      // Handle error
