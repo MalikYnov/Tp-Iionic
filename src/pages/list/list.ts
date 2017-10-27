@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CameraPage} from '../camera/camera';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
@@ -14,7 +15,7 @@ export class ListPage {
     this.selectedItem = navParams.get('item');
 
     // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
+    this.icons = ['Camera', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
       'american-football', 'boat', 'bluetooth', 'build'];
 
     this.items = [];
@@ -29,8 +30,6 @@ export class ListPage {
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
-    });
+    this.navCtrl.push(CameraPage);
   }
 }
