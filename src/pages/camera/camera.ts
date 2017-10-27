@@ -16,6 +16,7 @@ export class CameraPage {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
     }
+    base64ToGallery:Base64ToGallery;
   constructor(private camera: Camera) {
 
 
@@ -28,7 +29,7 @@ export class CameraPage {
     this.camera.getPicture(this.options).then((imageData) => {
      // imageData is either a base64 encoded string or a file URI
      // If it's base64:
-     This.Base64ToGallery = 'data:image/jpeg;base64,' + imageData;
+     This.base64ToGallery = 'data:image/jpeg;base64,' + imageData;
 
     }, (err) => {
      // Handle error
