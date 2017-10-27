@@ -14,8 +14,4 @@ export class HomePage {
     this.app.version = 0;
 
   }
-
-
-
-
 }
