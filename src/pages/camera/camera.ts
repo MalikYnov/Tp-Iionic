@@ -15,14 +15,11 @@ export class CameraPage {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE,
+      mediaType: this.camera.MediaType.ALLMEDIA,
       saveToPhotoAlbum : true
     }
     base64ToGallery:Base64ToGallery;
   constructor(private camera: Camera) {
-
-
-
 
   }
 
