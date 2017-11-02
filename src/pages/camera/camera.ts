@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions,CaptureVideoOptions } from '@ionic-native/media-capture';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 /**
  * Generated class for the CameraPage page.
  *
@@ -38,7 +39,7 @@ export class CameraPage {
       base64ToGallery:Base64ToGallery;
   
     
-      constructor(private camera: Camera, private mediaCapture:MediaCapture) {
+      constructor(private camera: Camera, private mediaCapture:MediaCapture,private localNotifications: LocalNotifications) {
     }
   
   
@@ -69,7 +70,10 @@ export class CameraPage {
 
 
     btnTakeVideoTapped(event) {
-
+      this.localNotifications.schedule({
+        id: 1,
+        text: 'Single ILocalNotification'
+      });
       this.mediaCapture.captureVideo(this.optionsVideo)
         .then(
           (data: MediaFile[]) => console.log(data),
