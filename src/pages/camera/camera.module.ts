@@ -8,6 +8,7 @@ import { Camera } from '@ionic-native/camera';
   ],
   imports: [
     IonicPageModule.forChild(CameraPage),
+    Camera
   ],
   providers:[
     Camera
