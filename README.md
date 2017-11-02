@@ -1,6 +1,6 @@
 Malik Verdiere 
 
-MAlik Verdiere
+Code pour Ionic View : fff85df9
 
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
