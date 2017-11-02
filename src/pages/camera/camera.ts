@@ -22,7 +22,7 @@ export class CameraPage {
     imgView:String ;
     VideoView:string;
 
-    optionsVideo: CaptureVideoOptions = { limit: 1, duration : 30 };
+    optionsVideo: CaptureVideoOptions = { limit: 1, duration : 30};
     options: CameraOptions = {
   
         quality: 100,
@@ -55,7 +55,15 @@ export class CameraPage {
        this.imgView= 'data:image/jpeg;base64,' + imageData;
        this.base64ToGallery.base64ToGallery(imageData, { prefix: '_img' }).then(
   
-          res => console.log('Saved image to gallery ', res),
+          res => {
+            console.log('Saved image to gallery ', res);
+              //si la photo c'est corectement enregistrée on envoie une notification à l'user
+              this.localNotifications.schedule({
+                id: 1,
+                text: 'La photo' + this.imgView +" est bien enregistrée"
+              });
+          
+          },
   
           err => console.log('Error saving image to gallery ', err)
   
@@ -70,13 +78,18 @@ export class CameraPage {
 
 
     btnTakeVideoTapped(event) {
-      this.localNotifications.schedule({
-        id: 1,
-        text: 'Video enregistrée'
-      });
+      
       this.mediaCapture.captureVideo(this.optionsVideo)
         .then(
-          (data: MediaFile[]) => console.log(data),
+          (data: MediaFile[]) => {
+            console.log(data);
+            //si la video c'est corectement enregistrée on envoie une notification à l'user
+            this.localNotifications.schedule({
+              id: 1,
+              text: 'Video enregistrée'
+            });
+
+          },
           (err: CaptureError) => console.error(err)
         );
       

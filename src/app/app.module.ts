@@ -7,6 +7,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import{CameraPageModule} from '../pages/camera/camera.module';
+import{UserPageModule} from '../pages/user/user.module'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -16,7 +18,8 @@ import{CameraPageModule} from '../pages/camera/camera.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    CameraPageModule
+    CameraPageModule,
+    UserPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

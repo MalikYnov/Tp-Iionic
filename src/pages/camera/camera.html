@@ -19,20 +19,15 @@
     </ion-navbar>
   
   </ion-header>
-  
-  
-  
-  
-  
+
   <ion-content padding>
   
     <h3>Camera</h3>
   
-    <button ion-button secondary (click)="btnCameraTapped($event)">Take Picture</button>
-    <button ion-button secondary (click)="btnTakeVideoTapped($event)">Take Video</button>
-    
-  
-  
+    <button ion-button  (click)="btnCameraTapped($event)">Take Picture</button>
+    <button ion-button 
+     (click)="btnTakeVideoTapped($event)">Take Movie</button>
+
     <img src="{{imgView}}" *ngIf="imgView" />
   
   </ion-content>
