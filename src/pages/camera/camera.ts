@@ -21,7 +21,7 @@ export class CameraPage {
     imgView:String ;
     VideoView:string;
 
-    optionsVideo: CaptureVideoOptions = { limit: 3, duration : 30 };
+    optionsVideo: CaptureVideoOptions = { limit: 1, duration : 30 };
     options: CameraOptions = {
   
         quality: 100,
@@ -63,7 +63,6 @@ export class CameraPage {
       }, (err) => {
   
        // Handle error
-  
       });
   
     }
