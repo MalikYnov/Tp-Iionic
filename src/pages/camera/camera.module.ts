@@ -3,6 +3,8 @@ import { IonicPageModule } from 'ionic-angular';
 import { CameraPage } from './camera';
 import { Camera } from '@ionic-native/camera';
 import { MediaCapture} from '@ionic-native/media-capture';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 @NgModule({
   declarations: [
     CameraPage,
@@ -12,7 +14,8 @@ import { MediaCapture} from '@ionic-native/media-capture';
   ],
   providers:[
     Camera,
-    MediaCapture
+    MediaCapture,
+    LocalNotifications
   ]
 })
 export class CameraPageModule {}
