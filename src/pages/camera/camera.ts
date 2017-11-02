@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
-import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions,CaptureVideoOptions } from '@ionic-native/media-capture';
 /**
  * Generated class for the CameraPage page.
  *
@@ -21,7 +21,7 @@ export class CameraPage {
     imgView:String ;
     VideoView:string;
 
-    optionsVideo: CaptureImageOptions = { limit: 3 };
+    optionsVideo: CaptureVideoOptions = { limit: 3, duration : 30 };
     options: CameraOptions = {
   
         quality: 100,
@@ -70,8 +70,8 @@ export class CameraPage {
 
 
     btnTakeVideoTapped(event) {
-      
-      this.mediaCapture.captureImage(this.optionsVideo)
+
+      this.mediaCapture.captureVideo(this.optionsVideo)
         .then(
           (data: MediaFile[]) => console.log(data),
           (err: CaptureError) => console.error(err)
